@@ -13,13 +13,9 @@
 
 <script>
 export default {
-    name: 'hello',
+    name: 'clr-drop-down',
     data() {
-        return {
-            msg: 'Welcome to Your Vue.js App'
-        };
+        return {};
     }
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
