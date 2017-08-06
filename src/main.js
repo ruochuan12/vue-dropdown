@@ -3,8 +3,10 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
+import Bus from 'URL_plugin/vue-bus';
 import clarityIconsVue from 'clarity-icons-vue';
 clarityIconsVue.install(Vue);
+Vue.use(Bus);
 Vue.config.productionTip = false;
 // function toThousandslsFilter(num) {
 //   return (+num || 0).toString()

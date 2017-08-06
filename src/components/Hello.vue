@@ -2,6 +2,8 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <clr-drop-down></clr-drop-down>
+    <button @click="handleAdd">100以内随机变化</button>
+    <count></count>
     <h2>Essential Links</h2>
     <ul>
       <li>
@@ -43,12 +45,20 @@
 export default {
     name: 'hello',
     components: {
-        clrDropDown: require('URL_components/dropdown/clr-drop-down')
+        clrDropDown: require('URL_components/dropdown/clr-drop-down'),
+        count: require('URL_components/count')
     },
     data() {
         return {
             msg: 'Welcome to Your Vue.js App'
         };
+    },
+    methods: {
+        handleAdd() {
+            console.log('handleAdd');
+            const val = Math.floor(Math.random() * 100 + 1);
+            this.$bus.emit('add', val);
+        }
     }
 };
 </script>
