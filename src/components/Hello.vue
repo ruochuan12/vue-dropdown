@@ -1,6 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <anchored-heading :level="1" :title="'特性1'"></anchored-heading>
+    <anchored-heading :level="2" :title="'特性2'"></anchored-heading>
+    <anchored-heading :level="3" :title="'特性3'"></anchored-heading>
+    <anchored-heading :level="4" :title="'特性4'"></anchored-heading>
     <clr-drop-down></clr-drop-down>
     <button @click="handleAdd">100以内随机变化</button>
     <count></count>
@@ -42,11 +46,13 @@
 </template>
 
 <script>
+import anchoredHeading from 'URL_components/render/anchored-heading.js';
 export default {
     name: 'hello',
     components: {
         clrDropDown: require('URL_components/dropdown/clr-drop-down'),
-        count: require('URL_components/count')
+        count: require('URL_components/count'),
+        anchoredHeading
     },
     data() {
         return {
